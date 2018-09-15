@@ -1,14 +1,20 @@
-body {
+html{
     background: rgba(24,38,92,1);
+}
+body {
     margin: 0px;
     padding: 0px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* HEAD   */
 
 .head{
-    min-height: 20vh;
     max-height: 20vh;
+    margin-bottom: 3px;
 }
 .head-player{
     display: flex;
@@ -78,67 +84,67 @@ body {
     flex-direction: column;
 }
 
-/* BODY */
-
-.monster3DProfile{
-    position: relative;
-    /* margin-top: -230px; */
-    margin-left: -44px;
+/*BODY*/
+.monsterName{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 9px;
 }
 
-.ring1{
-    width: 100px;
-    position: absolute;
+.monsters{
+   width: 100%;
+   height: 40%;
+   margin-top: 5px;;
+   background-image: url("/images/icon/Base.png");
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   padding-top: 25px;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
 }
 
-.ring2{
-    width: 90px;
-    position: absolute;
-    margin: 5px;
+
+.N1{
+    width: 20px;
+    height: 20px;
+}
+
+.stats{
+    display: flex;
+}
+
+.stats p{
+    color: #fff;
+    margin-left: 5px;
+    font-size: 9px;
 }
 
 .statistics{
-    overflow: scroll;
-    height: 72vh;
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
 }
 
 .statistics::-webkit-scrollbar { width: 0 !important }
 .statistics { -ms-overflow-style: none; }
 
-.monsters{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 45%;
-    background-image: url("/images/icon/BackMonster.png");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-
+.BackMonster{
+    width: 45%;
 }
 
-.stats{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-left: -55px;
-    margin-right: 20px;
-}
-
-.monsterName{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    color: #fff;
-    font-size: 12px;
-    align-content: center;
-    align-items: center;
-}
 
 /* FOOTER */
 
 .menu-footer{
     display: flex;
-    
+    min-height: 10vh;
+    max-height: 10vh;
     
     justify-content: space-between;
 }
@@ -153,6 +159,27 @@ body {
     font-size: 11px;
     color: #fff;
 }
+
+.menu-icon:hover p {
+    visibility: visible;
+}
+
+.menu-icon p{
+    color: #fff;
+    font-size: 11px;
+    visibility: hidden;
+}
+
+.about{
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+    color: #fff;
+}
+
+.about::-webkit-scrollbar { width: 0 !important }
+.about { -ms-overflow-style: none; }
+
 /* BATTLE */
 
 .battle{
@@ -195,3 +222,185 @@ body {
     margin-top: -550px;
 }
 
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+    html {
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      transform-origin: left top;
+      width: 100vh;
+      overflow-x: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+  }
+
+  .arena{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 55vh;
+    max-height: 61vh;
+
+}
+
+.down-icon, .up-icon{
+    width: 60px;
+}
+
+.backSelectArena {
+    position: relative;
+    z-index: 1;
+}
+
+.nameArena {
+    position: absolute;
+    left: 35%;
+    top: 25px;
+    width: 120px;
+    z-index: 2;
+}   
+
+.vert .carousel-item-next.carousel-item-left,
+.vert .carousel-item-prev.carousel-item-right {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.vert .carousel-item-next,
+.vert .active.carousel-item-right {
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100% 0);
+}    
+
+.vert .carousel-item-prev,
+.vert .active.carousel-item-left {
+-webkit-transform: translate3d(0,-100%, 0);
+        transform: translate3d(0,-100%, 0);
+}
+
+.avalaibleArena {
+    position: absolute;
+    left: 25%;
+    top: 150px;
+    width: 180px;
+    z-index: 2;
+} 
+
+.battleArena {
+    position: absolute;
+    left: 19%;
+    top: 140px;
+    width: 220px;
+    z-index: 2;
+} 
+
+.watchArena {
+    position: absolute;
+    left: 30%;
+    top: 100px;
+    width: 150px;
+    z-index: 2;
+} 
+
+/*SELECT MOSTER*/
+.selectMonstersBack{
+    width: 200px;
+    height: 215px;
+    background-image: url("/images/SelectMonster/MonsterSelectionBack.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+ }
+
+ .selectMonstersImg{
+     width: 80%;
+ }
+ .SelectMonsters{
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.SelectMonsters::-webkit-scrollbar { width: 0 !important }
+.SelectMonsters { -ms-overflow-style: none; }
+
+.cardMonsters{
+    display: flex;
+    flex-direction: row;
+}
+
+.SelectHP{
+    width: 120px;
+}
+
+.TheThing{
+    width: 70%;
+}
+
+.return{
+    width: 20px;
+}
+
+.ContainerSelectMonster{
+    height: 100vh;
+    width: 100%;
+    max-width: 375px;
+    max-height: 812px;
+    background: rgba(24,38,92,1);
+
+    background-image: url("/images/SelectMonster/MonsterSelectionBackground.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+}
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    width:inherit;
+    height:200px;
+    /* To center horizontally */
+    margin: 0;
+    padding: 15px;
+    background-image: url("../assets/UI_Elements/General/PopUp_Back.png");
+    background-size: 100% 100%;
+    background-color: rgba(10, 10, 10, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.joinBattleModal, .watchBattleModal {
+    width: 200px;
+}
+
+.textModal {
+    width: 300px
+}
+
+.acceptBattle, .cancelBattle {
+    width: 160px;
+}

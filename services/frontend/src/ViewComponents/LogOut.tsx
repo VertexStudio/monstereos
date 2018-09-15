@@ -18,7 +18,6 @@ export default class LogOut extends React.Component<any, any> {
   public render() {
     return (
       <React.Fragment>
-        {/* <Button color="danger" onClick={this.toggle}>LogOut</Button> */}
         <Modal isOpen={this.state.modal} toggle={this.toggle} >
           <ModalHeader toggle={this.toggle}>Log Out</ModalHeader>
           <ModalBody>
