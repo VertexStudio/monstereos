@@ -18,6 +18,12 @@ const Head = (props: any) => (
                 </div>
             </div>
         </div>
+        <div className="title-monsters">
+            <div className="sub-head">
+                <img className="icon-monsters" src = "/images/icon/MMONSTERS.png" />
+            </div>
+            <img className="Separation" src = "images/icon/Separation.png" />
+        </div>
     </div>
   )
 

@@ -3,20 +3,24 @@ import * as React from "react"
 const Footer = (props: any) => (
     <footer className="menu-footer">
         <div className="menu-icon">
-            <img className="menu-home" src="/images/icon/LogOut_Icon.png" />
+            <p>Log out</p>
+            <img className="menu-home IconLogOut" src="/images/icon/LogOut_Icon.png" />
+        </div>
+        <div className="menu-icon ">
+            <p>My monsters</p>
+            <img className="menu-home IconMonster" src="/images/icon/Monster_Icon.png" />
         </div>
         <div className="menu-icon">
-            <p className="text-icon">My Monsters</p>
-            <img className="menu-home" src="/images/icon/Monster_Icon.png" />
+            <p>Arena</p>
+            <img className="menu-home IconArena" src="/images/icon/Arena.png" />
         </div>
         <div className="menu-icon">
-            <img className="menu-home" src="/images/icon/Arena.png" />
+            <p>Rank</p>
+            <img className="menu-home IconRank" src="/images/icon/Rank_Icon.png" />
         </div>
         <div className="menu-icon">
-            <img className="menu-home" src="/images/icon/Rank_Icon.png" />
-        </div>
-        <div className="menu-icon">
-            <img className="menu-home" src="/images/icon/Info_Icon.png" />
+            <p>About</p>
+            <img className="menu-home IconInfo" src="/images/icon/Info_Icon.png" />
         </div>
     </footer>
   )
